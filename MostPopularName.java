@@ -1,6 +1,8 @@
 /**
  * Authors: Zachary Zampa & Caleb Martin
  * Since: 2020/01/30
+ *
+ * Description: This is the methods for the program
  */
 
 
@@ -25,7 +27,7 @@ public class MostPopularName {
         } else if (arrayContainsSubstring(name, storage)) {
             return ("That name is not of the most popular but it is a substring of a top 200 most popular name!");
         }
-        return "That name is not one of the 200 most popular nor is it a substring of a top 200 most popular.";
+        return "That name is not one of the 200 most popular NOR is it a substring of a top 200 most popular.";
     }
 
     /**
@@ -100,12 +102,17 @@ public class MostPopularName {
         return storage;
     }
 
-    public static void main (String[] args) {
-        String file = userInput(filePrompt);
-        ArrayList<String> nameList = fileRead(file);
-        System.out.println(nameList.toString());
-        String name = userInput(namePrompt);
-        System.out.println(isSuccess(name, nameList));
+    public static String itWasClicked(String name, String fileName) {
+        ArrayList<String> nameList = fileRead(fileName);
+        return isSuccess(name, nameList);
     }
+
+//    public static void main (String[] args) {
+//        String file = userInput(filePrompt);
+//        ArrayList<String> nameList = fileRead(file);
+//        System.out.println(nameList.toString());
+//        String name = userInput(namePrompt);
+//        System.out.println(isSuccess(name, nameList));
+//    }
 
 }
